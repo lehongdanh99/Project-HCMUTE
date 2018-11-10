@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Diagnostics;
+
+using System.IO;
+
+namespace AnhVIet
+{
+    public partial class Form1 : Form 
+    {
+        List<NODE> s = new List<NODE>();
+        String Line;
+        NODE node = null , root= new NODE();
+        Tree tree = new Tree();
+
+        public Form1()
+        {
+            InitializeComponent();
+            try
+            {
+                StreamReader sr = new StreamReader("G:\\Tudienanhvietxaydung.txt");
+                Line = sr.ReadLine();
+                while (Line != null)
+                {
+                    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
+                    node = tree.Insert(node, words[0], words[1]);
+                    Line = sr.ReadLine();
+                }
+                root = node;
+                sr.Close();
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Biet le la:" + e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Da xu ly biet le");
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string FWord = textBox1.Text;
+            if (tree.Seacrch(root, FWord) != null)
+                MessageBox.Show(tree.Seacrch(root, FWord));
+        }
+    }
+
+    
+   
+    
+}
