@@ -45,9 +45,28 @@ namespace AnhVIet
             {
                 Console.WriteLine("Da xu ly biet le");
             }
+
+
+          
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form2 add = new Form2();
+               
+            if (add.ShowDialog() == DialogResult.OK) MessageBox.Show("thêm thành công");
+            this.Close();
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
         {
 
         }
@@ -58,6 +77,9 @@ namespace AnhVIet
             if (tree.Seacrch(root, FWord) != null)
                 MessageBox.Show(tree.Seacrch(root, FWord));
         }
+
+       
+        
     }
 
     

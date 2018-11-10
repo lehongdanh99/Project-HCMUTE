@@ -79,6 +79,7 @@
             this.btnDel.TabIndex = 2;
             this.btnDel.Text = "Xóa Từ";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // Form1
             // 
@@ -92,6 +93,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.Text = "Dictionary";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
