@@ -36,35 +36,38 @@ namespace AnhVIet
 
         }
 
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.GC.Collect();
+        }
+
         private void btn_Click(object sender, EventArgs e)
         {
-            if (this.DialogResult == DialogResult.OK)
+            if (MeanBox.Text == "" || WordBox.Text == "")
             {
+                MessageBox.Show("Bạn chưa nhập đủ nghĩa và từ! ", "th", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-                if (MeanBox.Text == "" || WordBox.Text == "")
+            else
+            {
+                StreamReader sr = new StreamReader("D:\\Tudien.txt");
+                Line = sr.ReadLine();
+                while (Line != null)
                 {
-                    MessageBox.Show("Bạn chưa nhập đủ nghĩa và từ! ");
-                }
-
-                else
-                {
-                    StreamReader sr = new StreamReader("D:\\Tudien.txt");
+                    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
+                    node = tree.Insert(node, words[0], words[1]);
                     Line = sr.ReadLine();
-                    while (Line != null)
-                    {
-                        string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                        node = tree.Insert(node, words[0], words[1]);
-                        Line = sr.ReadLine();
-                    }
-                    root = node;
-
-                    sr.Close();
-                    string FWord = WordBox.Text;
-                    if (tree.Seacrch(root, FWord) != null)
-                    {
-                        MessageBox.Show("Từ đã có trong từ điển! ");
-                    }
-                    else if(tree.Seacrch(root,FWord) == "-1")
+                }
+                root = node;
+                sr.Close();
+                string fword = WordBox.Text;
+                if (tree.Seacrch(root, fword) != null)
+                {
+                    MessageBox.Show("Từ đã có trong từ điển! ");
+                }
+                if (this.DialogResult == DialogResult.OK)
+                {
+                    if (tree.Seacrch(root, fword) == null)
                     {
                         //Pass the filepath and filename to the StreamWriter Constructor
                         StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
@@ -79,3 +82,4 @@ namespace AnhVIet
         }
     }
 }
+

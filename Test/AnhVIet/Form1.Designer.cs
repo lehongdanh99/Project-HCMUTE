@@ -40,7 +40,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(223, 63);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(587, 32);
@@ -59,7 +59,7 @@
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(223, 186);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(81, 63);
             this.btnSearch.TabIndex = 2;
@@ -70,7 +70,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(437, 186);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(81, 63);
             this.btnAdd.TabIndex = 2;
@@ -81,7 +81,7 @@
             // btnDel
             // 
             this.btnDel.Location = new System.Drawing.Point(718, 186);
-            this.btnDel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(81, 63);
             this.btnDel.TabIndex = 2;
@@ -121,9 +121,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNghiaTu);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Dictionary";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

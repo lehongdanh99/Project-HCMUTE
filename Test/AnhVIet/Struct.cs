@@ -47,8 +47,7 @@ namespace AnhVIet
                 return Seacrch(root.Left, FindWord);
             else if (string.Compare(root.Word.ToLower(), FindWord.ToLower()) == -1)
                 return Seacrch(root.Right, FindWord);
-
-            return "";
+            return null;
         }
     }
 }

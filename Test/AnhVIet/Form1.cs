@@ -55,6 +55,11 @@ namespace AnhVIet
 
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            System.GC.Collect();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             try
