@@ -23,9 +23,8 @@ namespace AnhVIet
         public Form1()
         {
             InitializeComponent();
-            try
-            {
-                StreamReader sr = new StreamReader("G:\\Tudienanhvietxaydung.txt");
+           
+                StreamReader sr = new StreamReader("D:\\Tudien.txt");
                 Line = sr.ReadLine();
                 while (Line != null)
                 {
@@ -34,20 +33,7 @@ namespace AnhVIet
                     Line = sr.ReadLine();
                 }
                 root = node;
-                sr.Close();
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Biet le la:" + e.Message);
-            }
-            finally
-            {
-                Console.WriteLine("Da xu ly biet le");
-            }
-
-
-          
+                sr.Close(); 
         }
 
 

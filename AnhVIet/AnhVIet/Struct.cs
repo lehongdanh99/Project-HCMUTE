@@ -39,11 +39,14 @@ namespace AnhVIet
         }
         public string Seacrch(NODE root, string FindWord)                   //gọi đệ quy hàm search
         {
-            if (string.Compare(root.Word, FindWord) == 0)           //giống nhau: trả ra cái nghĩa
+            if (string.Compare(root.Word.ToLower(), FindWord.ToLower()) == 0)           //giống nhau: trả ra cái nghĩa
             { return root.Mean; }
-            else if (string.Compare(root.Word, FindWord) == 1)          //Word>word thì từ cần tìm chạy về phía bên trái
+            else if (string.Compare(root.Word.ToLower(), FindWord.ToLower()) == 1)          //Word>word thì từ cần tìm chạy về phía bên trái
                 return Seacrch(root.Left, FindWord);
-            else return Seacrch(root.Right, FindWord);
+            else if (string.Compare(root.Word.ToLower(), FindWord.ToLower()) == -1)
+                return Seacrch(root.Right, FindWord);
+
+            return null;
         }
 
     }

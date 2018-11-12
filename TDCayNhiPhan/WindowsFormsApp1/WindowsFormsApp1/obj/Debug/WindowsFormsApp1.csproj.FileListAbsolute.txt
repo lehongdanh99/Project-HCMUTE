@@ -34,3 +34,6 @@ G:\CauTrucGT\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFor
 D:\GitHub\Project-UTE\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
 D:\GitHub\Project-UTE\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\GitHub\Project-UTE\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Na xin 1 chỗ cho github\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Na xin 1 chỗ cho github\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Na xin 1 chỗ cho github\Project-HCMUTE\TDCayNhiPhan\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
