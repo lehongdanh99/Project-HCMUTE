@@ -21,14 +21,6 @@ namespace AnhVIet
         {
 
         }
-
-        private void ShowListView()
-        {
-            ListViewItem lv = new ListViewItem("abc");
-            lv.SubItems.Add("efg");
-            listView1.Items.Add(lv);
-        }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             //NODE tree = new NODE();
@@ -44,7 +36,9 @@ namespace AnhVIet
             {
                 string[] words = Line.Split(':');
                 Line = sr.ReadLine();
-                ShowListView();
+                ListViewItem lv = new ListViewItem(words[0]);
+                lv.SubItems.Add(words[1]);
+                listView1.Items.Add(lv);
             }
         }
     }
