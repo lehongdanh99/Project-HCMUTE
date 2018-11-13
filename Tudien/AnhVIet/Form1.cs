@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Speech.Synthesis;
 
 namespace AnhVIet
 {
@@ -19,6 +20,7 @@ namespace AnhVIet
         NODE node , root= new NODE();
         Tree tree = new Tree();
         string T = "admin";
+        SpeechSynthesizer read;  //âm thanh
         public Form1()
         {
             InitializeComponent();
@@ -56,6 +58,10 @@ namespace AnhVIet
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            MessageBox.Show("Bạn có muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.Cancel)
+            {
+                e.Cancel=true;
+            }
             System.GC.Collect();
         }
 
@@ -72,6 +78,12 @@ namespace AnhVIet
                 MessageBox.Show("Đã nhập sai thông tin đăng nhập","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
             
             }
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+            read = new SpeechSynthesizer();
+            read.SpeakAsync(textBox1.Text);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

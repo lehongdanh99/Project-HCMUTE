@@ -36,17 +36,18 @@
             this.txtNghiaTu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtTK = new System.Windows.Forms.TextBox();
-            this.txtMK = new System.Windows.Forms.TextBox();
             this.btnDN = new System.Windows.Forms.Button();
+            this.txtMK = new System.Windows.Forms.TextBox();
+            this.txtTK = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnRead = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 26);
+            this.textBox1.Location = new System.Drawing.Point(79, 26);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(441, 27);
@@ -63,7 +64,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(97, 137);
+            this.btnSearch.Location = new System.Drawing.Point(95, 120);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(61, 51);
             this.btnSearch.TabIndex = 2;
@@ -73,7 +74,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(234, 137);
+            this.btnAdd.Location = new System.Drawing.Point(221, 120);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(61, 51);
             this.btnAdd.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // btnDel
             // 
-            this.btnDel.Location = new System.Drawing.Point(398, 137);
+            this.btnDel.Location = new System.Drawing.Point(372, 120);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(61, 51);
             this.btnDel.TabIndex = 2;
@@ -93,7 +94,7 @@
             // 
             // txtNghiaTu
             // 
-            this.txtNghiaTu.Location = new System.Drawing.Point(97, 65);
+            this.txtNghiaTu.Location = new System.Drawing.Point(79, 62);
             this.txtNghiaTu.Multiline = true;
             this.txtNghiaTu.Name = "txtNghiaTu";
             this.txtNghiaTu.ReadOnly = true;
@@ -116,61 +117,73 @@
             this.groupBox1.Controls.Add(this.txtTK);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(221, 199);
+            this.groupBox1.Location = new System.Drawing.Point(221, 173);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(353, 154);
+            this.groupBox1.Size = new System.Drawing.Size(309, 129);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Bảng đăng nhập";
             this.groupBox1.Visible = false;
             // 
-            // label3
+            // btnDN
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 26);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "label3";
+            this.btnDN.Location = new System.Drawing.Point(194, 82);
+            this.btnDN.Name = "btnDN";
+            this.btnDN.Size = new System.Drawing.Size(86, 41);
+            this.btnDN.TabIndex = 4;
+            this.btnDN.Text = "Đăng Nhập";
+            this.btnDN.UseVisualStyleBackColor = true;
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
-            // label4
+            // txtMK
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 56);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "label4";
+            this.txtMK.Location = new System.Drawing.Point(113, 56);
+            this.txtMK.Name = "txtMK";
+            this.txtMK.Size = new System.Drawing.Size(186, 20);
+            this.txtMK.TabIndex = 3;
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(89, 31);
+            this.txtTK.Location = new System.Drawing.Point(113, 28);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(186, 20);
             this.txtTK.TabIndex = 2;
             // 
-            // txtMK
+            // label4
             // 
-            this.txtMK.Location = new System.Drawing.Point(91, 65);
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(183, 20);
-            this.txtMK.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Nhập Mật Khẩu:";
             // 
-            // btnDN
+            // label3
             // 
-            this.btnDN.Location = new System.Drawing.Point(188, 100);
-            this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(86, 41);
-            this.btnDN.TabIndex = 4;
-            this.btnDN.Text = "button1";
-            this.btnDN.UseVisualStyleBackColor = true;
-            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nhập Tài Khoản:";
+            // 
+            // btnRead
+            // 
+            this.btnRead.BackgroundImage = global::AnhVIet.Properties.Resources.icon_1691327_960_720;
+            this.btnRead.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRead.Location = new System.Drawing.Point(526, 26);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(29, 27);
+            this.btnRead.TabIndex = 4;
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 353);
+            this.ClientSize = new System.Drawing.Size(562, 339);
+            this.Controls.Add(this.btnRead);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnAdd);
@@ -205,6 +218,7 @@
         private System.Windows.Forms.TextBox txtTK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnRead;
     }
 }
 
