@@ -61,9 +61,16 @@ namespace AnhVIet
 
         private void btnDN_Click(object sender, EventArgs e)
         {
-            if(txtDN.Text==T && txtMK.Text==T)
+            if(txtTK.Text==T && txtMK.Text==T)
             {
-                
+                MessageBox.Show("Đăng nhập thành công");
+                Form3 f3 = new Form3();
+                f3.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Đã nhập sai thông tin đăng nhập","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            
             }
         }
 
