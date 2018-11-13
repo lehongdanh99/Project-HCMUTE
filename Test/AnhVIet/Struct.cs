@@ -96,7 +96,15 @@ namespace AnhVIet
 
             p = null;
             return true;
-
+        }
+        public void Traverse(NODE tree)
+        {
+            if(tree != null)
+            {
+                Traverse(tree.Left);
+                Insert(tree, tree.Word, tree.Mean);
+                Traverse(tree.Right);
+            }
 
         }
     }
