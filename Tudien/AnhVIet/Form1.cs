@@ -49,6 +49,7 @@ namespace AnhVIet
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            
             groupBox1.Show();
             Tree a = new Tree();
             a.Del(ref root, "load");
@@ -84,6 +85,11 @@ namespace AnhVIet
         {
             read = new SpeechSynthesizer();
             read.SpeakAsync(textBox1.Text);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

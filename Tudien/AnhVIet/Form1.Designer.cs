@@ -117,9 +117,9 @@
             this.groupBox1.Controls.Add(this.txtTK);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(221, 173);
+            this.groupBox1.Location = new System.Drawing.Point(79, 177);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(309, 129);
+            this.groupBox1.Size = new System.Drawing.Size(451, 159);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng đăng nhập";
@@ -129,7 +129,7 @@
             // 
             this.btnDN.Location = new System.Drawing.Point(194, 82);
             this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(86, 41);
+            this.btnDN.Size = new System.Drawing.Size(92, 41);
             this.btnDN.TabIndex = 4;
             this.btnDN.Text = "Đăng Nhập";
             this.btnDN.UseVisualStyleBackColor = true;
@@ -137,22 +137,22 @@
             // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(113, 56);
+            this.txtMK.Location = new System.Drawing.Point(194, 53);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(186, 20);
+            this.txtMK.Size = new System.Drawing.Size(210, 20);
             this.txtMK.TabIndex = 3;
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(113, 28);
+            this.txtTK.Location = new System.Drawing.Point(194, 24);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(186, 20);
+            this.txtTK.Size = new System.Drawing.Size(210, 20);
             this.txtTK.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 56);
+            this.label4.Location = new System.Drawing.Point(84, 60);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 1;
@@ -161,11 +161,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 31);
+            this.label3.Location = new System.Drawing.Point(81, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Nhập Tài Khoản:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnRead
             // 
