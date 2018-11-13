@@ -47,7 +47,6 @@ namespace AnhVIet
             {
                 MessageBox.Show("Bạn chưa nhập đủ nghĩa và từ! ", "th", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             else
             {
                 StreamReader sr = new StreamReader("D:\\Tudien.txt");
@@ -55,19 +54,19 @@ namespace AnhVIet
                 while (Line != null)
                 {
                     string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                    node = tree.Insert(node, words[0], words[1]);
+                    //node = tree.Insert(ref node, words[0], words[1]);
+                    tree.Insert(root, words[0], words[1]);
                     Line = sr.ReadLine();
                 }
+                MessageBox.Show(root.Word);
                 root = node;
                 sr.Close();
                 string fword = WordBox.Text;
                 if (tree.Seacrch(root, fword) != null)
                 {
                     MessageBox.Show("Từ đã có trong từ điển! ");
-                }
-                if (this.DialogResult == DialogResult.OK)
-                {
-                    if (tree.Seacrch(root, fword) == null)
+                }                                
+                    else
                     {
                         //Pass the filepath and filename to the StreamWriter Constructor
                         StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
@@ -77,7 +76,7 @@ namespace AnhVIet
                         sw.Close();
                         MessageBox.Show("Them Thanh Cong! ");
                     }
-                }
+                
             }
         }
     }

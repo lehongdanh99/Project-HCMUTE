@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
-
 using System.IO;
 
 namespace AnhVIet
@@ -16,31 +15,27 @@ namespace AnhVIet
     public partial class Form1 : Form 
     {
        
-        String Line;
-        NODE node = null , root= new NODE();
+       
+        NODE node , root= new NODE();
         Tree tree = new Tree();
 
         public Form1()
         {
             InitializeComponent();
-           
-                StreamReader sr = new StreamReader("D:\\Tudien.txt");
-                Line = sr.ReadLine();
-                while (Line != null)
-                {
-                    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                    node = tree.Insert(node, words[0], words[1]);
-                    Line = sr.ReadLine();
-                }
-                root = node;
-                sr.Close();
-
         }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            String Line;
+            StreamReader sr = new StreamReader("D:\\Tudien.txt");
+            Line = sr.ReadLine();
+            while (Line != null)
+            {
+                string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
+                node = tree.Insert(node, words[0], words[1]);
+                Line = sr.ReadLine();
+            }
+            root = node;
+            sr.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,7 +47,10 @@ namespace AnhVIet
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-
+            Tree a = new Tree();
+            a.Del(ref root, "load");
+            textBox1.Text = "";
+            txtNghiaTu.Text = "";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -62,19 +60,13 @@ namespace AnhVIet
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string FWord = textBox1.Text;
-                if (tree.Seacrch(root, FWord) != null)
+                if (tree.Seacrch(root, textBox1.Text) != null)
                 {
-                    txtNghiaTu.Text = tree.Seacrch(root, FWord);
+                    txtNghiaTu.Text = tree.Seacrch(root, textBox1.Text);
                 }
-            }
-            catch (Exception )
-            {
+            else
+          
                 MessageBox.Show("Không có từ này! Bạn có thể thêm từ ^^");
-
-            }
         }      
     }
 }
