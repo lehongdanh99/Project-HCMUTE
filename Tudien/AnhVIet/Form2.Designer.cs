@@ -38,50 +38,45 @@
             // bl1
             // 
             this.bl1.AutoSize = true;
-            this.bl1.Location = new System.Drawing.Point(51, 28);
-            this.bl1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bl1.Location = new System.Drawing.Point(38, 23);
             this.bl1.Name = "bl1";
-            this.bl1.Size = new System.Drawing.Size(25, 17);
+            this.bl1.Size = new System.Drawing.Size(20, 13);
             this.bl1.TabIndex = 0;
             this.bl1.Text = "Từ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(38, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Nghĩa";
             // 
             // WordBox
             // 
-            this.WordBox.Location = new System.Drawing.Point(129, 25);
-            this.WordBox.Margin = new System.Windows.Forms.Padding(4);
+            this.WordBox.Location = new System.Drawing.Point(97, 20);
             this.WordBox.Multiline = true;
             this.WordBox.Name = "WordBox";
-            this.WordBox.Size = new System.Drawing.Size(277, 41);
+            this.WordBox.Size = new System.Drawing.Size(209, 34);
             this.WordBox.TabIndex = 1;
             this.WordBox.TextChanged += new System.EventHandler(this.WordBox_TextChanged);
             // 
             // MeanBox
             // 
-            this.MeanBox.Location = new System.Drawing.Point(129, 84);
-            this.MeanBox.Margin = new System.Windows.Forms.Padding(4);
+            this.MeanBox.Location = new System.Drawing.Point(97, 68);
             this.MeanBox.Multiline = true;
             this.MeanBox.Name = "MeanBox";
-            this.MeanBox.Size = new System.Drawing.Size(277, 43);
+            this.MeanBox.Size = new System.Drawing.Size(209, 36);
             this.MeanBox.TabIndex = 1;
             this.MeanBox.TextChanged += new System.EventHandler(this.MeanBox_TextChanged);
             // 
             // btnSave
             // 
             this.btnSave.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnSave.Location = new System.Drawing.Point(251, 167);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(190, 123);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(155, 74);
+            this.btnSave.Size = new System.Drawing.Size(116, 60);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -89,15 +84,14 @@
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 308);
+            this.ClientSize = new System.Drawing.Size(453, 239);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.MeanBox);
             this.Controls.Add(this.WordBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form2";
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);

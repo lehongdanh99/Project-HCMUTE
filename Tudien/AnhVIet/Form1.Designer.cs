@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -36,13 +37,15 @@
             this.txtNghiaTu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnDN = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtTK = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRead = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDN = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -112,39 +115,31 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnDN);
             this.groupBox1.Controls.Add(this.txtMK);
             this.groupBox1.Controls.Add(this.txtTK);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(79, 177);
+            this.groupBox1.Location = new System.Drawing.Point(44, 170);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(451, 159);
+            this.groupBox1.Size = new System.Drawing.Size(486, 166);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng đăng nhập";
             this.groupBox1.Visible = false;
             // 
-            // btnDN
-            // 
-            this.btnDN.Location = new System.Drawing.Point(194, 82);
-            this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(92, 41);
-            this.btnDN.TabIndex = 4;
-            this.btnDN.Text = "Đăng Nhập";
-            this.btnDN.UseVisualStyleBackColor = true;
-            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
-            // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(194, 53);
+            this.txtMK.Location = new System.Drawing.Point(231, 53);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(210, 20);
             this.txtMK.TabIndex = 3;
+            this.txtMK.UseSystemPasswordChar = true;
             // 
             // txtTK
             // 
-            this.txtTK.Location = new System.Drawing.Point(194, 24);
+            this.txtTK.Location = new System.Drawing.Point(231, 24);
             this.txtTK.Name = "txtTK";
             this.txtTK.Size = new System.Drawing.Size(210, 20);
             this.txtTK.TabIndex = 2;
@@ -152,20 +147,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 60);
+            this.label4.Location = new System.Drawing.Point(151, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Nhập Mật Khẩu:";
+            this.label4.Text = "PASSWORD:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 31);
+            this.label3.Location = new System.Drawing.Point(151, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 13);
+            this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Nhập Tài Khoản:";
+            this.label3.Text = "USER NAME:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnRead
@@ -179,11 +174,33 @@
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AnhVIet.Properties.Resources.user_login_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(18, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(127, 127);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnDN
+            // 
+            this.btnDN.Image = global::AnhVIet.Properties.Resources.Accept_icon;
+            this.btnDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDN.Location = new System.Drawing.Point(328, 79);
+            this.btnDN.Name = "btnDN";
+            this.btnDN.Size = new System.Drawing.Size(64, 35);
+            this.btnDN.TabIndex = 4;
+            this.btnDN.Text = "LOGIN";
+            this.btnDN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDN.UseVisualStyleBackColor = true;
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 339);
+            this.ClientSize = new System.Drawing.Size(562, 321);
             this.Controls.Add(this.btnRead);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnDel);
@@ -193,12 +210,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNghiaTu);
             this.Controls.Add(this.textBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Dictionary";
+            this.Text = "Anh-Việt|Dictionary";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +239,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

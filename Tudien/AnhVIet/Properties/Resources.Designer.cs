@@ -63,9 +63,29 @@ namespace AnhVIet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Accept_icon {
+            get {
+                object obj = ResourceManager.GetObject("Accept-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_1691327_960_720 {
             get {
                 object obj = ResourceManager.GetObject("icon-1691327_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_login_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-login-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
