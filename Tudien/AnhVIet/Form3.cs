@@ -43,6 +43,7 @@ namespace AnhVIet
             while (Line != null)
             {
                 string[] words = Line.Split(':');
+                Line = sr.ReadLine();
                 ShowListView();
             }
         }
