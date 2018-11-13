@@ -28,7 +28,7 @@ namespace AnhVIet
         private void Form1_Load(object sender, EventArgs e)
         {
             String Line;
-            StreamReader sr = new StreamReader("D:\\Tudien.txt");
+            StreamReader sr = new StreamReader("G:\\Tudien.txt");
             Line = sr.ReadLine();
             while (Line != null)
             {
@@ -58,7 +58,7 @@ namespace AnhVIet
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Bạn có muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.Cancel)
+           if( MessageBox.Show("Bạn có muốn thoát khỏi chương trình ?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
             {
                 e.Cancel=true;
             }

@@ -49,7 +49,7 @@ namespace AnhVIet
             }
             else
             {
-                StreamReader sr = new StreamReader("D:\\Tudien.txt");
+                StreamReader sr = new StreamReader("G:\\Tudien.txt");
                 Line = sr.ReadLine();
                 while (Line != null)
                 {
@@ -57,24 +57,25 @@ namespace AnhVIet
                                                             //node = tree.Insert(ref node, words[0], words[1]);
                     tree.Insert(root, words[0], words[1]);
                     Line = sr.ReadLine();
+                }
                     root = node;
                     sr.Close();
-                }
+                
                 string fword = WordBox.Text;
                 if (tree.Seacrch(root, fword) != null)
                 {
                     MessageBox.Show("Từ đã có trong từ điển! ");
                 }                                
-                    else
-                    {
+                else
+                {
                         //Pass the filepath and filename to the StreamWriter Constructor
-                        StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
+                        StreamWriter sw = new StreamWriter("G:\\Tudien.txt", true);
 
                         //Write a line of text
                         sw.WriteLine(WordBox.Text + ":" + MeanBox.Text);
                         sw.Close();
                         MessageBox.Show("Them Thanh Cong! ");
-                    }
+                }
                 
             }
         }
