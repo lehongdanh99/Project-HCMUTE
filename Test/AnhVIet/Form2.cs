@@ -33,7 +33,7 @@ namespace AnhVIet
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
@@ -45,7 +45,7 @@ namespace AnhVIet
         {
             if (MeanBox.Text == "" || WordBox.Text == "")
             {
-                MessageBox.Show("Bạn chưa nhập đủ nghĩa và từ! ", "th", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn chưa nhập đủ nghĩa và từ! ", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -54,13 +54,12 @@ namespace AnhVIet
                 while (Line != null)
                 {
                     string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                    //node = tree.Insert(ref node, words[0], words[1]);
+                                                            //node = tree.Insert(ref node, words[0], words[1]);
                     tree.Insert(root, words[0], words[1]);
                     Line = sr.ReadLine();
+                    root = node;
+                    sr.Close();
                 }
-                MessageBox.Show(root.Word);
-                root = node;
-                sr.Close();
                 string fword = WordBox.Text;
                 if (tree.Seacrch(root, fword) != null)
                 {
