@@ -18,7 +18,7 @@ namespace AnhVIet
        
         NODE node , root= new NODE();
         Tree tree = new Tree();
-
+        string T = "admin";
         public Form1()
         {
             InitializeComponent();
@@ -47,6 +47,7 @@ namespace AnhVIet
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            groupBox1.Show();
             Tree a = new Tree();
             a.Del(ref root, "load");
             textBox1.Text = "";
@@ -56,6 +57,14 @@ namespace AnhVIet
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.GC.Collect();
+        }
+
+        private void btnDN_Click(object sender, EventArgs e)
+        {
+            if(txtDN.Text==T && txtMK.Text==T)
+            {
+                
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
