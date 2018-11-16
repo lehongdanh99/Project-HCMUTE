@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -42,41 +43,14 @@
             this.columnHeader1,
             this.columnHeader2});
             this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(49, 173);
+            this.listView1.Location = new System.Drawing.Point(37, 141);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1090, 480);
+            this.listView1.Size = new System.Drawing.Size(818, 391);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(420, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(553, 84);
-            this.textBox1.TabIndex = 1;
-            // 
-            // Label1
-            // 
-            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(212, 12);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(131, 70);
-            this.Label1.TabIndex = 2;
-            this.Label1.Text = "Nhap Tu";
-            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label1.Click += new System.EventHandler(this.Tu_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(1000, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 42);
-            this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "Xoa";
-            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // columnHeader1
             // 
@@ -88,15 +62,48 @@
             this.columnHeader2.Text = "Tiếng Việt";
             this.columnHeader2.Width = 500;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(261, 10);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(416, 69);
+            this.textBox1.TabIndex = 1;
+            // 
+            // Label1
+            // 
+            this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(98, 10);
+            this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(98, 57);
+            this.Label1.TabIndex = 2;
+            this.Label1.Text = "Nhap Tu";
+            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label1.Click += new System.EventHandler(this.Tu_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(722, 23);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 34);
+            this.btnDelete.TabIndex = 3;
+            this.btnDelete.Text = "Xoa";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1219, 699);
+            this.ClientSize = new System.Drawing.Size(914, 568);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form3";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);

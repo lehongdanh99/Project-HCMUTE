@@ -73,6 +73,36 @@ namespace AnhVIet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2041_2d5bb3bb6d5a16d1314a44169af7371c {
+            get {
+                object obj = ResourceManager.GetObject("2041-2d5bb3bb6d5a16d1314a44169af7371c", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Accept_icon {
+            get {
+                object obj = ResourceManager.GetObject("Accept-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Designcontest_Ecommerce_Business_Save {
+            get {
+                object obj = ResourceManager.GetObject("Designcontest-Ecommerce-Business-Save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_1691327_960_720 {
             get {
                 object obj = ResourceManager.GetObject("icon-1691327_960_720", resourceCulture);
@@ -83,9 +113,49 @@ namespace AnhVIet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jommans_Briefness_Search {
+            get {
+                object obj = ResourceManager.GetObject("Jommans-Briefness-Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_list_add {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-list-add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_window_close {
+            get {
+                object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-window-close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tu_dien_anh_viet_100_000_tu {
             get {
                 object obj = ResourceManager.GetObject("tu-dien-anh-viet-100-000-tu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_login_icon {
+            get {
+                object obj = ResourceManager.GetObject("user-login-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

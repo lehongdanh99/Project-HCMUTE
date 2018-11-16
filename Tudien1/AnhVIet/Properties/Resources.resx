@@ -118,13 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Oxygen-Icons.org-Oxygen-Actions-list-add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-list-add.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-1691327_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-1691327_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Oxygen-Icons.org-Oxygen-Actions-window-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-window-close.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2018-11-16 11_15_45-Photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2018-11-16 11_15_45-Photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jommans-Briefness-Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jommans-Briefness-Search.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Accept-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Accept-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tu-dien-anh-viet-100-000-tu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tu-dien-anh-viet-100-000-tu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2018-11-16 11_15_45-Photos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2018-11-16 11_15_45-Photos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Designcontest-Ecommerce-Business-Save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Designcontest-Ecommerce-Business-Save.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2041-2d5bb3bb6d5a16d1314a44169af7371c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2041-2d5bb3bb6d5a16d1314a44169af7371c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user-login-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-login-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

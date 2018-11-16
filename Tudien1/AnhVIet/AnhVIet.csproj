@@ -121,5 +121,26 @@
   <ItemGroup>
     <None Include="Resources\2018-11-16 11_15_45-Photos.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2041-2d5bb3bb6d5a16d1314a44169af7371c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jommans-Briefness-Search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-list-add.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-window-close.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accept-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Designcontest-Ecommerce-Business-Save.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-login-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

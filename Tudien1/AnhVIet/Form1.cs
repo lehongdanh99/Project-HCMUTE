@@ -26,7 +26,7 @@ namespace AnhVIet
         {
             Thread t = new Thread(new ThreadStart(SplashScreen));
             t.Start();
-            Thread.Sleep(3500);
+            Thread.Sleep(4600);
             
             InitializeComponent();
             t.Abort();
@@ -37,8 +37,7 @@ namespace AnhVIet
         private void SplashScreen()
         {
             Application.Run(new Form4());
-            Form4 fb1 = new Form4();
-                fb1.Close();
+                  
         }
         private void Form1_Load(object sender, EventArgs e)
         {
