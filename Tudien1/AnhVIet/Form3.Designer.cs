@@ -44,7 +44,7 @@
             this.columnHeader2});
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(37, 141);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listView1.Margin = new System.Windows.Forms.Padding(2);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(818, 391);
             this.listView1.TabIndex = 0;
@@ -65,7 +65,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(261, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(416, 69);
@@ -86,7 +86,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(722, 23);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 34);
             this.btnDelete.TabIndex = 3;
@@ -103,9 +103,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Dictionary|Anh-Việt";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

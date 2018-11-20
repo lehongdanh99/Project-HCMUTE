@@ -63,10 +63,7 @@ namespace AnhVIet
 
         }
 
-        internal void DialogResult()
-        {
-            throw new NotImplementedException();
-        }
+   
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -122,7 +119,7 @@ namespace AnhVIet
                 }
             else
           
-                MessageBox.Show("Không có từ này! Bạn có thể thêm từ ^^");
+                MessageBox.Show("Xin lỗi tư bạn tra không có trong từ điển:(");
         }      
     }
 }

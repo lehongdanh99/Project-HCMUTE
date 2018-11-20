@@ -58,9 +58,9 @@ namespace AnhVIet
                     tree.Insert(root, words[0], words[1]);
                     Line = sr.ReadLine();
                 }
-                    root = node;
-                    sr.Close();
-                
+                root = node;
+                sr.Close();
+            
                 string fword = WordBox.Text;
                 if (tree.Seacrch(root, fword) != null)
                 {

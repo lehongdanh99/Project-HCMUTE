@@ -10,10 +10,10 @@ namespace AnhVIet
     public class NODE
     {
         public string Word;         //Từ tiếng anh
-        public string Mean { get; set; }         //Nghĩa tiếng việt
+        public string Mean;        //Nghĩa tiếng việt
         public NODE Left;
         public NODE Right;
-        public NODE parent;
+   
     }
 
     public class Tree
