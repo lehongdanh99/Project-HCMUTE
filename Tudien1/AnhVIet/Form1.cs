@@ -41,25 +41,25 @@ namespace AnhVIet
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (!File.Exists("G:\\Tudien.txt"))
-            {
-                MessageBox.Show("Error", "Không tìm thấy file nguồn");
-                this.Close();
-            }
-            else
-            {
-                String Line;
-                StreamReader sr = new StreamReader("G:\\Tudien.txt");
-                Line = sr.ReadLine();
-                while (Line != null)
-                {
-                    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                    node = tree.Insert(node, words[0], words[1]);
-                    Line = sr.ReadLine();
-                }
-                root = node;
-                sr.Close();
-            }
+            //if (!File.Exists("G:\\Tudien.txt"))
+            //{
+            //    MessageBox.Show("Error", "Không tìm thấy file nguồn");
+            //    this.Close();
+            //}
+            //else
+            //{
+                ////String Line;
+                ////StreamReader sr = new StreamReader("G:\\Tudien.txt");
+                ////Line = sr.ReadLine();
+                ////while (Line != null)
+                ////{
+                ////    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
+                ////    node = tree.Insert(node, words[0], words[1]);
+                ////    Line = sr.ReadLine();
+                ////}
+                ////root = node;
+                ////sr.Close();
+            //}
 
         }
 
