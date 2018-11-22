@@ -41,29 +41,13 @@ namespace AnhVIet
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            //if (!File.Exists("G:\\Tudien.txt"))
-            //{
-            //    MessageBox.Show("Error", "Không tìm thấy file nguồn");
-            //    this.Close();
-            //}
-            //else
-            //{
-                ////String Line;
-                ////StreamReader sr = new StreamReader("G:\\Tudien.txt");
-                ////Line = sr.ReadLine();
-                ////while (Line != null)
-                ////{
-                ////    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
-                ////    node = tree.Insert(node, words[0], words[1]);
-                ////    Line = sr.ReadLine();
-                ////}
-                ////root = node;
-                ////sr.Close();
-            //}
 
         }
 
-   
+        internal void DialogResult()
+        {
+            throw new NotImplementedException();
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -75,10 +59,6 @@ namespace AnhVIet
         private void btnDel_Click(object sender, EventArgs e)
         {
             groupBox1.Show();
-            Tree a = new Tree();
-            a.Del(ref root, "load");
-            textBox1.Text = "";
-            txtNghiaTu.Text = "";
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -113,13 +93,32 @@ namespace AnhVIet
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-                if (tree.Seacrch(root, textBox1.Text) != null)
+            if (!File.Exists("D:\\Tudien.txt"))
+            {
+                MessageBox.Show("Error", "Không tìm thấy file nguồn");
+                this.Close();
+            }
+            else
+            {
+                String Line;
+                StreamReader sr = new StreamReader("D:\\Tudien.txt");
+                Line = sr.ReadLine();
+                while (Line != null)
+                {
+                    string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
+                    node = tree.Insert(node, words[0], words[1]);
+                    Line = sr.ReadLine();
+                }
+                root = node;
+                sr.Close();
+            }
+            if (tree.Seacrch(root, textBox1.Text) != null)
                 {
                     txtNghiaTu.Text = tree.Seacrch(root, textBox1.Text);
                 }
             else
           
-                MessageBox.Show("Xin lỗi tư bạn tra không có trong từ điển:(");
+                MessageBox.Show("Không có từ này! Bạn có thể thêm từ ^^");
         }      
     }
 }

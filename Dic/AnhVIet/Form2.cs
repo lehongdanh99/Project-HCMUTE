@@ -49,7 +49,7 @@ namespace AnhVIet
             }
             else
             {
-                StreamReader sr = new StreamReader("G:\\Tudien.txt");
+                StreamReader sr = new StreamReader("D:\\Tudien.txt");
                 Line = sr.ReadLine();
                 while (Line != null)
                 {
@@ -58,9 +58,9 @@ namespace AnhVIet
                     tree.Insert(root, words[0], words[1]);
                     Line = sr.ReadLine();
                 }
-                root = node;
-                sr.Close();
-            
+                    root = node;
+                    sr.Close();
+                
                 string fword = WordBox.Text;
                 if (tree.Seacrch(root, fword) != null)
                 {
@@ -69,7 +69,7 @@ namespace AnhVIet
                 else
                 {
                         //Pass the filepath and filename to the StreamWriter Constructor
-                        StreamWriter sw = new StreamWriter("G:\\Tudien.txt", true);
+                        StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
 
                         //Write a line of text
                         sw.WriteLine(WordBox.Text + ":" + MeanBox.Text);

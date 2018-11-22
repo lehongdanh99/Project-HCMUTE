@@ -34,13 +34,13 @@
             this.txtNghiaTu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDN = new System.Windows.Forms.Button();
             this.txtMK = new System.Windows.Forms.TextBox();
             this.txtTK = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRead = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDN = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -101,30 +101,6 @@
             this.groupBox1.Text = "Bảng đăng nhập";
             this.groupBox1.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AnhVIet.Properties.Resources.user_login_icon;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDN
-            // 
-            this.btnDN.Image = global::AnhVIet.Properties.Resources.Accept_icon;
-            this.btnDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDN.Location = new System.Drawing.Point(222, 82);
-            this.btnDN.Name = "btnDN";
-            this.btnDN.Size = new System.Drawing.Size(71, 41);
-            this.btnDN.TabIndex = 4;
-            this.btnDN.Text = "Login";
-            this.btnDN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDN.UseVisualStyleBackColor = true;
-            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
-            // 
             // txtMK
             // 
             this.txtMK.Location = new System.Drawing.Point(113, 56);
@@ -168,6 +144,30 @@
             this.btnRead.TabIndex = 4;
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AnhVIet.Properties.Resources.user_login_icon;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 77);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnDN
+            // 
+            this.btnDN.Image = global::AnhVIet.Properties.Resources.Accept_icon;
+            this.btnDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDN.Location = new System.Drawing.Point(222, 82);
+            this.btnDN.Name = "btnDN";
+            this.btnDN.Size = new System.Drawing.Size(71, 41);
+            this.btnDN.TabIndex = 4;
+            this.btnDN.Text = "Login";
+            this.btnDN.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDN.UseVisualStyleBackColor = true;
+            this.btnDN.Click += new System.EventHandler(this.btnDN_Click);
             // 
             // btnDel
             // 
@@ -225,7 +225,7 @@
             this.Controls.Add(this.textBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Dictionary|Anh-Việt";
+            this.Text = "s";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
