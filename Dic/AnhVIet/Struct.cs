@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 namespace AnhVIet
 {
 
     public class NODE
     {
         public string Word;         //Từ tiếng anh
-        public string Mean { get; set; }         //Nghĩa tiếng việt
+        public string Mean;      //Nghĩa tiếng việt
         public NODE Left;
         public NODE Right;
-        public NODE parent;
     }
 
     public class Tree
@@ -53,10 +53,10 @@ namespace AnhVIet
             }
             return null;
         }
-        public void searchTowNode(NODE p, NODE q)
+        public void Replace(NODE p, NODE q)
         {
             if (q.Left != null)
-                searchTowNode(p, q.Left);
+                Replace(p, q.Left);
             else
             {
                 p.Word = q.Word;
@@ -90,7 +90,7 @@ namespace AnhVIet
                     root = root.Left;
                 else
                 {
-                    searchTowNode(p, root.Right);
+                    Replace(p, root.Right);
                 }
             }
 
@@ -102,7 +102,10 @@ namespace AnhVIet
             if(tree != null)
             {
                 Traverse(tree.Left);
-                Insert(tree, tree.Word, tree.Mean);
+                StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
+                //Write a line of text
+                sw.WriteLine(tree.Word.ToString() + ":" + tree.Mean.ToString());
+                sw.Close();
                 Traverse(tree.Right);
             }
 

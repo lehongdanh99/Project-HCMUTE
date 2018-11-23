@@ -55,19 +55,26 @@ namespace AnhVIet
             DataGV.Width = totalWidth + 120;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataGV.Update();
+            DataGV.Refresh();
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (tree.Seacrch(root, DelBox.Text) != null)
+            if (tree.Seacrch(root, DelBox.Text.ToString()) == null)
             {
-                tree.Del(ref root, DelBox.Text);
+                MessageBox.Show("Khong co tu nay trong tu dien! ");
             }
-            StreamWriter sw = new StreamWriter("D:\\Tudien.txt", true);
-
-            //Write a line of text
-            string filePath = @"D:\Tudien.txt";
-            File.WriteAllText(filePath,tree.+":"+root.Mean );
-            sw.Close();
-            MessageBox.Show("Them Thanh Cong! ");
+            else
+            {
+                string Filepath = @"D:\Tudien.txt";
+                System.IO.File.WriteAllText(Filepath, "");
+                tree.Del(ref root, DelBox.Text);
+                tree.Traverse(root);
+                MessageBox.Show("Xoa Thanh Cong! ");
+            }
         }
     }
 
