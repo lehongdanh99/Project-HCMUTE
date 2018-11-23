@@ -12,14 +12,16 @@ namespace AnhVIet
 {
     public partial class Form3 : Form
     {
+
         NODE node, root = new NODE();
         Tree tree = new Tree();
+        DataGridViewTextBoxColumn dic = new DataGridViewTextBoxColumn();
         public Form3()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        public void ReadFile()
         {
             int count = 0;     // Varialble used to perform count of columns before moving to next row in table.
             string line = "";  // Variable used to store data from file.txt
@@ -54,14 +56,12 @@ namespace AnhVIet
             //the selector on the left of the DataGridView is about 45 in width 
             DataGV.Width = totalWidth + 120;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            DataGV.Update();
-            DataGV.Refresh();
+            ReadFile();   
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (tree.Seacrch(root, DelBox.Text.ToString()) == null)
             {
@@ -69,13 +69,31 @@ namespace AnhVIet
             }
             else
             {
-                string Filepath = @"D:\Tudien.txt";
-                System.IO.File.WriteAllText(Filepath, "");
-                tree.Del(ref root, DelBox.Text);
-                tree.Traverse(root);
-                MessageBox.Show("Xoa Thanh Cong! ");
+         
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult del = MessageBox.Show("Ban co muon xoa: ", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (del == DialogResult.Yes)
+            {
+                if (tree.Seacrch(root, DelBox.Text.ToString()) == null)
+                {
+                    MessageBox.Show("Khong co tu nay trong tu dien! ");
+                }
+                else
+                {
+                    string Filepath = @"D:\Tudien.txt";
+                    System.IO.File.WriteAllText(Filepath, "");
+                    tree.Del(ref root, DelBox.Text);
+                    tree.Traverse(root);
+                    MessageBox.Show("Xoa Thanh Cong! ");
+                }
+            }
+            else return;
+        }
+
     }
 
 }

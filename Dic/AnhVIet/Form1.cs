@@ -26,7 +26,7 @@ namespace AnhVIet
         {
             Thread t = new Thread(new ThreadStart(SplashScreen));
             t.Start();
-            Thread.Sleep(4600);
+            Thread.Sleep(1600);
             
             InitializeComponent();
             t.Abort();
