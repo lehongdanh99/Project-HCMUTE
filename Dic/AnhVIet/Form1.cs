@@ -24,15 +24,13 @@ namespace AnhVIet
         SpeechSynthesizer read;  //âm thanh
         public Form1()
         {
+
             Thread t = new Thread(new ThreadStart(SplashScreen));
             t.Start();
             Thread.Sleep(1600);
-            
-            InitializeComponent();
             t.Abort();
             
-
-
+            InitializeComponent();
         }
         private void SplashScreen()
         {
@@ -77,6 +75,7 @@ namespace AnhVIet
                 MessageBox.Show("Đăng nhập thành công");
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
+               groupBox1.Hide();
             }
             else
             {

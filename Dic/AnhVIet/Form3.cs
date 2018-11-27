@@ -75,6 +75,27 @@ namespace AnhVIet
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            int count = 0;     // Varialble used to perform count of columns before moving to next row in table.
+            string line = "";  // Variable used to store data from file.txt
+            StreamReader sr = new StreamReader("D:\\Tudien.txt"); // Reads the data from the file.txt file
+            while (!sr.EndOfStream)  // Allows for data in Text file to be separated by comma delimiter 
+            {
+                line += sr.ReadLine() + ":";
+                count++;
+
+                string[] parts = line.Split(':').ToArray();
+                
+                node = tree.Insert(node, parts[0], parts[1]);
+                count = 0;
+                line = "";
+
+                if (DelBox.Text == parts[0]) // Adds data to correct rows in table by counting the columns        
+                {
+                    DataGV.Rows.Clear();
+                    DataGV.Rows.Add(parts[0], parts[1]);
+                }
+            }
+            sr.Close();
             DialogResult del = MessageBox.Show("Ban co muon xoa: ", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (del == DialogResult.Yes)
             {
@@ -90,6 +111,8 @@ namespace AnhVIet
                     tree.Traverse(root);
                     MessageBox.Show("Xoa Thanh Cong! ");
                 }
+                DataGV.Rows.Clear();
+                ReadFile();
             }
             else return;
         }
