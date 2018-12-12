@@ -24,34 +24,26 @@ namespace AnhVIet
         SpeechSynthesizer read;  //âm thanh
         public Form1()
         {
-
-            Thread t = new Thread(new ThreadStart(SplashScreen));
-            t.Start();
-            Thread.Sleep(1600);
-            t.Abort();
-            
             InitializeComponent();
         }
         private void SplashScreen()
         {
-            Application.Run(new Form4());
-                  
+           Application.Run(new Form4());       
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.SuspendLayout();
+            Thread t = new Thread(new ThreadStart(SplashScreen));
+            t.Start();
+            Thread.Sleep(2000);
+            t.Abort();
+            this.WindowState = FormWindowState.Normal;
+            this.Activate();
         }
-
-        internal void DialogResult()
-        {
-            throw new NotImplementedException();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form2 add = new Form2();
-            add.ShowDialog();
-           
+            add.ShowDialog();     
         }
 
         private void btnDel_Click(object sender, EventArgs e)

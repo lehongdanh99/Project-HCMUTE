@@ -49,20 +49,21 @@ namespace AnhVIet
             }
             else
             {
+                String Line;
                 StreamReader sr = new StreamReader("D:\\Tudien.txt");
                 Line = sr.ReadLine();
                 while (Line != null)
                 {
                     string[] words = Line.Split(':');       //Slpit tách chuổi thành 2 chuổi nhỏ bới dấu hai chấm
                                                             //node = tree.Insert(ref node, words[0], words[1]);
-                    tree.Insert(root, words[0], words[1]);
+                    node = tree.Insert(node, words[0], words[1]);
                     Line = sr.ReadLine();
                 }
                     root = node;
                     sr.Close();
                 
-                string fword = WordBox.Text;
-                if (tree.Seacrch(root, fword) != null)
+                string fword = WordBox.Text.ToString();
+                if (tree.Seacrch(node, fword) != null)
                 {
                     MessageBox.Show("Từ đã có trong từ điển! ");
                 }                                
