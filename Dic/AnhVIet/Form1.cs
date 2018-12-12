@@ -26,19 +26,19 @@ namespace AnhVIet
         {
             InitializeComponent();
         }
-        private void SplashScreen()
-        {
-           Application.Run(new Form4());       
-        }
+        //private void SplashScreen()
+        //{
+        //   Application.Run(new Form4());       
+        //}
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.SuspendLayout();
-            Thread t = new Thread(new ThreadStart(SplashScreen));
-            t.Start();
-            Thread.Sleep(2000);
-            t.Abort();
-            this.WindowState = FormWindowState.Normal;
-            this.Activate();
+        //    this.SuspendLayout();
+        //    Thread t = new Thread(new ThreadStart(SplashScreen));
+        //    t.Start();
+        //    Thread.Sleep(2000);
+        //    t.Abort();
+        //    this.WindowState = FormWindowState.Normal;
+        //    this.Activate();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -106,9 +106,9 @@ namespace AnhVIet
             if (tree.Seacrch(root, textBox1.Text) != null)
                 {
                     txtNghiaTu.Text = tree.Seacrch(root, textBox1.Text);
+                    tree.Destroy(ref root);
                 }
             else
-          
                 MessageBox.Show("Không có từ này! Bạn có thể thêm từ ^^");
         }      
     }

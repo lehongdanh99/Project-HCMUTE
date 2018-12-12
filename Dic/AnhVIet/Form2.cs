@@ -76,6 +76,7 @@ namespace AnhVIet
                         sw.WriteLine(WordBox.Text + ":" + MeanBox.Text);
                         sw.Close();
                         MessageBox.Show("Them Thanh Cong! ");
+                    
                 }
                 
             }

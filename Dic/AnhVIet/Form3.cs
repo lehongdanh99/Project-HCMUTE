@@ -15,37 +15,34 @@ namespace AnhVIet
 
         NODE node, root = new NODE();
         Tree tree = new Tree();
-        DataGridViewTextBoxColumn dic = new DataGridViewTextBoxColumn();
+        
         public Form3()
         {
             InitializeComponent();
         }
         public void Reset()
         {
-            if (DelBox.Text == "")
-            {
                 DataGV.Rows.Clear();
                 ReadFile();
-            }
         }
         public void ReadFile()
         {
-            int count = 0;     // Varialble used to perform count of columns before moving to next row in table.
+           /* int count = 0; */    // Varialble used to perform count of columns before moving to next row in table.
             string line = "";  // Variable used to store data from file.txt
             StreamReader sr = new StreamReader("D:\\Tudien.txt"); // Reads the data from the file.txt file
             while (!sr.EndOfStream)  // Allows for data in Text file to be separated by comma delimiter 
             {
                 line += sr.ReadLine() + ":";
-                count++;
+                //count++;
 
-                if (count >= 2) // Adds data to correct rows in table by counting the columns        
-                {
+                //if (count >= 2) // Adds data to correct rows in table by counting the columns        
+                //{
                     string[] parts = line.Split(':').ToArray();
                     DataGV.Rows.Add(parts[0], parts[1]);
                     node = tree.Insert(node, parts[0], parts[1]);
-                    count = 0;
+                    //count = 0;
                     line = "";
-                }
+                //}
             }
             root = node;
             sr.Close();
@@ -70,25 +67,22 @@ namespace AnhVIet
 
         private void Testbtn_Click(object sender, EventArgs e)
         {
-            if (tree.Seacrch(root, DelBox.Text.ToString()) == null)
+            if (tree.Seacrch(root, DelBox.Text.ToString()) == null || DelBox.Text.ToString()==null)
             {
                 MessageBox.Show("Khong co tu nay trong tu dien! ");
                 Reset();
             }
             else
             {
-                int count = 0;     // Varialble used to perform count of columns before moving to next row in table.
                 string line = "";  // Variable used to store data from file.txt
                 StreamReader sr = new StreamReader("D:\\Tudien.txt"); // Reads the data from the file.txt file
                 while (!sr.EndOfStream)  // Allows for data in Text file to be separated by comma delimiter 
                 {
                     line += sr.ReadLine() + ":";
-                    count++;
 
                     string[] parts = line.Split(':').ToArray();
 
                     node = tree.Insert(node, parts[0], parts[1]);
-                    count = 0;
                     line = "";
 
                     if (DelBox.Text == parts[0]) // Adds data to correct rows in table by counting the columns        
@@ -103,18 +97,17 @@ namespace AnhVIet
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int count = 0;     // Varialble used to perform count of columns before moving to next row in table.
             string line = "";  // Variable used to store data from file.txt
             StreamReader sr = new StreamReader("D:\\Tudien.txt"); // Reads the data from the file.txt file
             while (!sr.EndOfStream)  // Allows for data in Text file to be separated by comma delimiter 
             {
                 line += sr.ReadLine() + ":";
-                count++;
+             
 
                 string[] parts = line.Split(':').ToArray();
                 
                 node = tree.Insert(node, parts[0], parts[1]);
-                count = 0;
+              
                 line = "";
 
                 if (DelBox.Text == parts[0]) // Adds data to correct rows in table by counting the columns        
@@ -127,7 +120,7 @@ namespace AnhVIet
             DialogResult del = MessageBox.Show("Ban co muon xoa: ", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (del == DialogResult.Yes)
             {
-                if (tree.Seacrch(root, DelBox.Text.ToString()) == null)
+                if (tree.Seacrch(root, DelBox.Text.ToString().ToLower()) == null)
                 {
                     MessageBox.Show("Khong co tu nay trong tu dien! ");
                 }
@@ -138,9 +131,9 @@ namespace AnhVIet
                     tree.Del(ref root, DelBox.Text);
                     tree.Traverse(root);
                     MessageBox.Show("Xoa Thanh Cong! ");
+                    
                 }
-                DataGV.Rows.Clear();
-                ReadFile();
+                Reset();
             }
             else return;
         }

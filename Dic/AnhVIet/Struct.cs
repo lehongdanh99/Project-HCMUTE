@@ -110,6 +110,15 @@ namespace AnhVIet
             }
 
         }
+
+        public void Destroy(ref NODE root)
+        {
+            Destroy(ref root.Left);
+            Destroy(ref root.Right);
+            root = null;
+            System.GC.Collect();
+
+        }
     }
 }
 
