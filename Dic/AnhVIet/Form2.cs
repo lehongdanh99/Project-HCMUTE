@@ -30,12 +30,6 @@ namespace AnhVIet
         {
 
         }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.GC.Collect();
@@ -76,7 +70,7 @@ namespace AnhVIet
                         sw.WriteLine(WordBox.Text + ":" + MeanBox.Text);
                         sw.Close();
                         MessageBox.Show("Them Thanh Cong! ");
-                    
+                    System.GC.Collect();
                 }
                 
             }

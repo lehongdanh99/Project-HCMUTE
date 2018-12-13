@@ -104,12 +104,16 @@ namespace AnhVIet
                 sr.Close();
             }
             if (tree.Seacrch(root, textBox1.Text) != null)
-                {
-                    txtNghiaTu.Text = tree.Seacrch(root, textBox1.Text);
-                    tree.Destroy(ref root);
-                }
+            {
+                txtNghiaTu.Text = tree.Seacrch(root, textBox1.Text);
+                tree.Destroy(root);
+            }
             else
+            {
                 MessageBox.Show("Không có từ này! Bạn có thể thêm từ ^^");
+                txtNghiaTu.Text = "";
+            }
+            
         }      
     }
 }

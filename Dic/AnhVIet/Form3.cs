@@ -131,9 +131,9 @@ namespace AnhVIet
                     tree.Del(ref root, DelBox.Text);
                     tree.Traverse(root);
                     MessageBox.Show("Xoa Thanh Cong! ");
-                    
                 }
                 Reset();
+                System.GC.Collect();
             }
             else return;
         }
